@@ -10,7 +10,7 @@ app.use('/public', static);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.engine('handlebars', exphbs({ defaultLayout: "" }));
+app.engine('handlebars', exphbs({ defaultLayout: '' }));
 app.set('view engine', 'handlebars');
 
 app.use(session({
@@ -26,10 +26,7 @@ app.use('/', (req, res, next) => {
 	let time = new Date().toUTCString();
 	let meth = req.method;
 	let rou = req.originalUrl;
-	let auth = "(Authenticated User)";
-	if(!req.session.user)
-		auth = "(Non-Authenticated User)";
-	console.log("[" + time + "]: " + meth + " " + rou + " " + auth);
+	console.log("[" + time + "]: " + meth + " " + rou);
 	next();
 });
 
