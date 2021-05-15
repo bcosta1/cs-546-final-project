@@ -1,0 +1,26 @@
+{
+  "name": "cs-546-final-project",
+  "version": "1.0.0",
+  "description": "our final project for cs 546",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcosta1/cs-546-final-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bcosta1/cs-546-final-project/issues"
+  },
+  "homepage": "https://github.com/bcosta1/cs-546-final-project#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "express-session": "^1.17.1",
+    "mongodb": "^3.6.6"
+  }
+}

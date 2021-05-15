@@ -9,7 +9,7 @@ const constructorMethod = (app) => {
   app.use('/profile', profileRoutes);
   app.use('/posts', postsRoutes);
   app.use('/login', loginRoutes);
-  app.use('/flavors' flavorsRoutes);
+  app.use('/flavors', flavorsRoutes);
 
   app.use('*', (req, res) => {
     res.sendStatus(404);
