@@ -3,7 +3,9 @@ let imgs = ["bite.png","black.jpeg","blast_zero.jpg","blast.png","brew.jpeg","ci
 let fp = document.getElementById("flavors");
 let count = 0;
 function animate(){
+  if(count > imgs.length)
+    count = 0;
   fp.src= "../public/imgs/"+imgs[count];
   count++;
-  setTimeout(5000);
+  setTimeout(animate,5000);
 }
