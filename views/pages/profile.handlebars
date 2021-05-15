@@ -43,15 +43,19 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
-      <p>Username: </p><p id="usr">replace this with the username</p>
+      <p>Username: </p><p id="usr">{{username}}</p>
       <label for="ff">Select your favorite flavor: </label>
         <select name="ff" id="ff">
-          {{!-----Repeat option line for all the flavors--------}}
           <option value="Original">Original</option>
+		  {{#each flavor}}
+		  <option value="{{flavor.name}}">{{flavor.name}}</option>
+		  {{/each}}
         </select>
       <div>
         <p>Posts: </p>
-          <p>{{!REPLACE THIS SECTION WITH THE POSTS ONCE WE PULL FROM DB}}</p>
+		  {{#each post}}
+		  <p>{{post.content}}</p>
+		  {{/each}}
       </div>
     </div>
   </div>
