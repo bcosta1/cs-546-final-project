@@ -30,6 +30,25 @@ app.use('/', (req, res, next) => {
 	next();
 });
 
+//sign in middlewear
+app.use('/profile', (req, res, next) => {
+	if (!req.session.user) {
+		res.redirect('/signin');
+	} else {
+		next();
+	}
+});
+
+app.use('/signin', (req, res, next) => {
+	if (req.session.user) {
+		//redirects to private if user is authenticated
+		res.redirect('/profile');
+	} else {
+		//renders signin
+		next();
+	}
+});
+
 configRoutes(app);
 
 app.listen(3000, () => {
