@@ -18,6 +18,13 @@
     color: black;
   }
   .btn_reply{
-    border-radius:10px;
+    border-radius:5px;
+    transition:.3s;
   }
-  
+  .btn_reply:hover{
+    background-color: black;
+    color:lightgray;
+  }
+  .jumbotron{
+    size: 90%;
+  }
