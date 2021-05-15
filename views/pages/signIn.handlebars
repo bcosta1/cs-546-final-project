@@ -45,15 +45,16 @@
     <div class="col-sm">
         {{!------Use "user/pass" for login post and use "cuser/cpass" for creating a new account------}}
         <p>Login</p>
-        <form method="post">
+        <form method="post" id="signin">
             Username:
                 <input type="text" name="user"/>
             Password:
                 <input type="text" name="pass"/>
+            
         </form>
         <br>
         <p>Or create an account</p>
-        <form method="post">
+        <form method="post" id="signup">
             Username:
                 <input type="text" name="cuser"/>
             Password:
