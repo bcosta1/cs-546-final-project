@@ -25,3 +25,11 @@
     background-color: black;
     color:lightgray;
   }
+  .fakeimage{
+    
+  }
+  #flavors{
+    transition:.3s;
+    width:100px;
+    height:100px;
+  }

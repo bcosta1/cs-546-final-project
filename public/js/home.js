@@ -9,5 +9,5 @@ function animate(){
     count = 0;
   fp.src = "../public/imgs/"+imgs[count];
   count++;
-  setTimeout(animate,1*1000);
+  setTimeout(animate,3*1000);
 }
