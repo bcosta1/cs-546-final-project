@@ -23,7 +23,7 @@ async function main(){
             weight: "0",
             carb: "0",
             gbi: "",
-            img: "../public/imgs/original.png"
+            img: "./public/imgs/original.png"
         }
         await flavorsCollection.insertOne(original);
         let frostbite = {
@@ -34,7 +34,7 @@ async function main(){
             weight: "0",
             carb: "0",
             gbi: "",
-            img: "../public/imgs/bite.png"
+            img: "./public/imgs/bite.png"
         }
         await flavorsCollection.insertOne(frostbite);
         let pb = {
@@ -45,7 +45,7 @@ async function main(){
             weight: "0",
             carb: "0",
             gbi: "",
-            img: "../public/imgs/black.jpeg"
+            img: "./public/imgs/black.jpeg"
         }
         await flavorsCollection.insertOne(pb);
         let blast_zero = {
@@ -56,7 +56,7 @@ async function main(){
             weight: "0",
             carb: "0",
             gbi: "",
-            img: "../public/imgs/blast_zero.jpg"
+            img: "./public/imgs/blast_zero.jpg"
         }
         await flavorsCollection.insertOne(blast_zero);
         let blast = {
@@ -67,7 +67,7 @@ async function main(){
             weight: "0",
             carb: "0",
             gbi: "",
-            img: "../public/imgs/blast.png"
+            img: "./public/imgs/blast.png"
         }
         await flavorsCollection.insertOne(blast);
         let brew = {
@@ -78,7 +78,7 @@ async function main(){
             weight: "0",
             carb: "0",
             gbi: "",
-            img: "../public/imgs/brew.jpeg"
+            img: "./public/imgs/brew.jpeg"
         }
         await flavorsCollection.insertOne(brew);
         let cc = {
@@ -89,7 +89,7 @@ async function main(){
             weight: "0",
             carb: "0",
             gbi: "",
-            img: "../public/imgs/citrus_cherry.png"
+            img: "./public/imgs/citrus_cherry.png"
         }
         await flavorsCollection.insertOne(cc);
         let citrus = {
@@ -100,7 +100,7 @@ async function main(){
             weight: "0",
             carb: "0",
             gbi: "",
-            img: "../public/imgs/citrus_blast.png"
+            img: "./public/imgs/citrus_blast.png"
         }
         await flavorsCollection.insertOne(citrus);
         let cyclone = {
@@ -111,7 +111,7 @@ async function main(){
             weight: "0",
             carb: "0",
             gbi: "",
-            img: "../public/imgs/cyclone.png"
+            img: "./public/imgs/cyclone.png"
         }
         await flavorsCollection.insertOne(cyclone.png);
         let diet = {
@@ -122,7 +122,7 @@ async function main(){
             weight: "0",
             carb: "0",
             gbi: "",
-            img: "../public/imgs/diet.png"
+            img: "./public/imgs/diet.png"
         }
         await flavorsCollection.insertOne(diet);
         let dsa = {
@@ -133,7 +133,7 @@ async function main(){
             weight: "0",
             carb: "0",
             gbi: "",
-            img: "../public/imgs/dsa.png"
+            img: "./public/imgs/dsa.png"
         }
         await flavorsCollection.insertOne(dsa);
         let ice = {
@@ -144,7 +144,7 @@ async function main(){
             weight: "0",
             carb: "0",
             gbi: "",
-            img: "../public/imgs/ice.jpg"
+            img: "./public/imgs/ice.jpg"
         }
         await flavorsCollection.insertOne(ice);
         let lightning = {
@@ -155,7 +155,7 @@ async function main(){
             weight: "0",
             carb: "0",
             gbi: "",
-            img: "../public/imgs/lightning.png"
+            img: "./public/imgs/lightning.png"
         }
         await flavorsCollection.insertOne(lightning);
         let live = {
@@ -166,7 +166,7 @@ async function main(){
             weight: "0",
             carb: "0",
             gbi: "",
-            img: "../public/imgs/live.png"
+            img: "./public/imgs/live.png"
         }
         await flavorsCollection.insertOne(live);
         let mash = {
@@ -177,7 +177,7 @@ async function main(){
             weight: "0",
             carb: "0",
             gbi: "",
-            img: "../public/imgs/mash-up.jpeg"
+            img: "./public/imgs/mash-up.jpeg"
         }
         await flavorsCollection.insertOne(mash);
         let melonz = {
@@ -188,7 +188,7 @@ async function main(){
             weight: "0",
             carb: "0",
             gbi: "",
-            img: "../public/imgs/melon-zero.png"
+            img: "./public/imgs/melon-zero.png"
         }
         await flavorsCollection.insertOne(melonz);
         let melon = {
@@ -199,7 +199,7 @@ async function main(){
             weight: "0",
             carb: "0",
             gbi: "",
-            img: "../public/imgs/melon.png"
+            img: "./public/imgs/melon.png"
         }
         await flavorsCollection.insertOne(melon);
         let red = {
@@ -210,7 +210,7 @@ async function main(){
             weight: "0",
             carb: "0",
             gbi: "",
-            img: "../public/imgs/red.png"
+            img: "./public/imgs/red.png"
         }
         await flavorsCollection.insertOne(red);
         let throwback = {
@@ -221,7 +221,7 @@ async function main(){
             weight: "0",
             carb: "0",
             gbi: "",
-            img: "../public/imgs/throwback.png"
+            img: "./public/imgs/throwback.png"
         }
         await flavorsCollection.insertOne(throwback);
         let voltage = {
@@ -232,7 +232,7 @@ async function main(){
             weight: "0",
             carb: "0",
             gbi: "",
-            img: "../public/imgs/voltage.png"
+            img: "./public/imgs/voltage.png"
         }
         await flavorsCollection.insertOne(voltage);
         let vd = {
@@ -243,7 +243,7 @@ async function main(){
             weight: "0",
             carb: "0",
             gbi: "",
-            img: "../public/imgs/voodew.jpg"
+            img: "./public/imgs/voodew.jpg"
         }
         await flavorsCollection.insertOne(vd);
         let wo = {
@@ -254,7 +254,7 @@ async function main(){
             weight: "0",
             carb: "0",
             gbi: "",
-            img: "../public/imgs/whiteout.jpeg"
+            img: "./public/imgs/whiteout.jpeg"
         }
         await flavorsCollection.insertOne(wo);
         let zero_sugar = {
@@ -265,7 +265,7 @@ async function main(){
             weight: "0",
             carb: "0",
             gbi: "",
-            img: "../public/imgs/zero_sugar.png"
+            img: "./public/imgs/zero_sugar.png"
         }
         await flavorsCollection.insertOne(zero_sugar);
     }
