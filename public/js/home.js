@@ -4,10 +4,10 @@ let imgs = new Array("bite.png","black.jpeg","blast_zero.jpg","blast.png","brew.
 let fp = document.getElementById("flavors");
 let count = 0;
 function animate(){
-  console.log("hi");
+fp.style.zIndex = "-1";
   if(count == imgs.length)
     count = 0;
   fp.src = "../public/imgs/"+imgs[count];
   count++;
-  setTimeout(animate,1*1000);
+  setTimeout(animate,3*1000);
 }
