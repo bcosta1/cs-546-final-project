@@ -7,8 +7,10 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-	req.session.user = {username: gamer};
+	req.session.user = {username: 'gamer'};
+	res.redirect('/profile');
 	//get req.body username and password
+	/*
 	const { username, password } = req.body;
 	let id;
 	let hash = '';
@@ -33,6 +35,7 @@ router.post('/', async (req, res) => {
 			res.status(403).redirect('/');
 		}
 	});
+	*/
 	//if they match then set req.session.user and then redirect them to the login page
 	// I will just do that here */
 });
