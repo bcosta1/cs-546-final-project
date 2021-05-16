@@ -2,8 +2,6 @@ const express = require('express');
 const app = express();
 const session = require('express-session');
 const static = express.static(__dirname + '/public');
-const flavors = require('./flavorsdummy');
-flavors.main();
 
 const configRoutes = require('./routes');
 const exphbs = require('express-handlebars');
