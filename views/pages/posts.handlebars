@@ -47,6 +47,7 @@
         <input type="text" id="title" placeholder="post title"/>
         <input type="text" id="body" placeholder="post body"/>
       </form>
+	  {{#each post}}
       <p>{{title}}</p>
       <div class= "posts">
         <p>{{body}}</p>
@@ -57,6 +58,7 @@
           Reply
         </button>
       </div>
+	  {{/each}}
     </div>
   </div>
 </div>
