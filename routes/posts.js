@@ -20,7 +20,7 @@ router.get('/tag/:tag', async (req, res) => {
 router.get('/', async (req, res) => {
   try {
     const postList = await postData.getAllPosts();
-    res.json(postList);
+    res.render('pages/posts', { post : postList });
   } catch (e) {
     res.status(500).json({ error: e });
   }
