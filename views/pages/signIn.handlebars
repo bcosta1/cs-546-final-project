@@ -19,23 +19,23 @@
 </div>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <a class="navbar-brand" href="/views/pages/home.handlebars">Just Dew It</a>
+  <a class="navbar-brand" href="/home">Just Dew It</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="/views/pages/profile.handlebars">Profile</a>
+        <a class="nav-link" href="/profile">Profile</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/views/pages/flavors.handlebars">Flavors</a>
+        <a class="nav-link" href="/flavors">Flavors</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/views/pages/posts.handlebars">Posts</a>
+        <a class="nav-link" href="/posts">Posts</a>
       </li>
       <li class= "nav-item">
-      	<a class="nav-link" href="/views/pages/signIn.handlebars">Sign In</a>
+      	<a class="nav-link" href="/signIn">Sign In</a>
     </ul>
   </div>  
 </nav>
@@ -45,15 +45,16 @@
     <div class="col-sm">
         {{!------Use "user/pass" for login post and use "cuser/cpass" for creating a new account------}}
         <p>Login</p>
-        <form method="post">
+        <form method="post" id="signin">
             Username:
                 <input type="text" name="user"/>
             Password:
                 <input type="text" name="pass"/>
+            
         </form>
         <br>
         <p>Or create an account</p>
-        <form method="post">
+        <form method="post" id="signup">
             Username:
                 <input type="text" name="cuser"/>
             Password:
@@ -65,7 +66,7 @@
     <nav class="navbar navbar-expand-xl bg-dark navbar-dark">
     <ul class="navbar-nav">
         <li class"nav-item">
-            <a class="nav-link" href="/views/pages/home.handlebars">Sign out</a>
+            <a class="nav-link" href="/home">Sign out</a>
         </li>
     </ul>
     </nav>
@@ -73,4 +74,3 @@
 </body>
 </html>
 <script src="public/js/signIn.js"></script>
-<script src="public/js/home.js"></script>
