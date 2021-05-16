@@ -1,7 +1,19 @@
-const flavors = require('./flavors');
+var MongoClient = require('mongodb').MongoClient;
+//Create a database named "flavors":
+var url = "mongodb://localhost:27017/flavors";
+
+MongoClient.connect(url, function(err, db) {
+  if (err) throw err;
+  console.log("Database created!");
+  db.close();
+});
+
+const mongoCollections = require('../config/mongoCollections');
 const connection = require('../config/mongoConnection');
+const flavors = mongoCollections.flavors;
 
 async function main(){
+    const flavorsCollection = await flavors();
     try{
         let original = {
             name: "Original",
@@ -13,7 +25,7 @@ async function main(){
             gbi: "",
             img: "../public/imgs/original.png"
         }
-        await flavors.create(original);
+        await flavorsCollection.insertOne(original);
         let frostbite = {
             name: "Frostbite",
             flavor: "citrus",
@@ -24,7 +36,7 @@ async function main(){
             gbi: "",
             img: "../public/imgs/bite.png"
         }
-        await flavors.create(frostbite);
+        await flavorsCollection.insertOne(frostbite);
         let pb = {
             name: "pitch black",
             flavor: "citrus",
@@ -35,7 +47,7 @@ async function main(){
             gbi: "",
             img: "../public/imgs/black.jpeg"
         }
-        await flavors.create(pb);
+        await flavorsCollection.insertOne(pb);
         let blast_zero = {
             name: "Baja Blast Zero",
             flavor: "citrus",
@@ -46,7 +58,7 @@ async function main(){
             gbi: "",
             img: "../public/imgs/blast_zero.jpg"
         }
-        await flavors.create(blast_zero);
+        await flavorsCollection.insertOne(blast_zero);
         let blast = {
             name: "Baja Blast",
             flavor: "citrus",
@@ -57,7 +69,7 @@ async function main(){
             gbi: "",
             img: "../public/imgs/blast.png"
         }
-        await flavors.create(blast);
+        await flavorsCollection.insertOne(blast);
         let brew = {
             name: "Liberty Brew",
             flavor: "citrus",
@@ -68,7 +80,7 @@ async function main(){
             gbi: "",
             img: "../public/imgs/brew.jpeg"
         }
-        await flavors.create(brew);
+        await flavorsCollection.insertOne(brew);
         let cc = {
             name: "Citrus Cherry",
             flavor: "citrus",
@@ -79,7 +91,7 @@ async function main(){
             gbi: "",
             img: "../public/imgs/citrus_cherry.png"
         }
-        await flavors.create(cc);
+        await flavorsCollection.insertOne(cc);
         let citrus = {
             name: "Citrus Blast",
             flavor: "citrus",
@@ -90,7 +102,7 @@ async function main(){
             gbi: "",
             img: "../public/imgs/citrus_blast.png"
         }
-        await flavors.create(citrus);
+        await flavorsCollection.insertOne(citrus);
         let cyclone = {
             name: "Cyclone",
             flavor: "citrus",
@@ -101,7 +113,7 @@ async function main(){
             gbi: "",
             img: "../public/imgs/cyclone.png"
         }
-        await flavors.create(cyclone.png);
+        await flavorsCollection.insertOne(cyclone.png);
         let diet = {
             name: "Diet Mountain Dew",
             flavor: "citrus",
@@ -112,7 +124,7 @@ async function main(){
             gbi: "",
             img: "../public/imgs/diet.png"
         }
-        await flavors.create(diet);
+        await flavorsCollection.insertOne(diet);
         let dsa = {
             name: "Dew-S-A",
             flavor: "citrus",
@@ -123,7 +135,7 @@ async function main(){
             gbi: "",
             img: "../public/imgs/dsa.png"
         }
-        await flavors.create(dsa);
+        await flavorsCollection.insertOne(dsa);
         let ice = {
             name: "Ice",
             flavor: "citrus",
@@ -134,7 +146,7 @@ async function main(){
             gbi: "",
             img: "../public/imgs/ice.jpg"
         }
-        await flavors.create(ice);
+        await flavorsCollection.insertOne(ice);
         let lightning = {
             name: "Sweet Lightning",
             flavor: "Peach",
@@ -145,7 +157,7 @@ async function main(){
             gbi: "",
             img: "../public/imgs/lightning.png"
         }
-        await flavors.create(lightning);
+        await flavorsCollection.insertOne(lightning);
         let live = {
             name: "Live-wire",
             flavor: "citrus",
@@ -156,7 +168,7 @@ async function main(){
             gbi: "",
             img: "../public/imgs/live.png"
         }
-        await flavors.create(live);
+        await flavorsCollection.insertOne(live);
         let mash = {
             name: "Merry Mash-up",
             flavor: "citrus",
@@ -167,7 +179,7 @@ async function main(){
             gbi: "",
             img: "../public/imgs/mash-up.jpeg"
         }
-        await flavors.create(mash);
+        await flavorsCollection.insertOne(mash);
         let melonz = {
             name: "Major Melon Zero",
             flavor: "citrus",
@@ -178,7 +190,7 @@ async function main(){
             gbi: "",
             img: "../public/imgs/melon-zero.png"
         }
-        await flavors.create(melonz);
+        await flavorsCollection.insertOne(melonz);
         let melon = {
             name: "Major Melon",
             flavor: "citrus",
@@ -189,7 +201,7 @@ async function main(){
             gbi: "",
             img: "../public/imgs/melon.png"
         }
-        await flavors.create(melon);
+        await flavorsCollection.insertOne(melon);
         let red = {
             name: "Code Red",
             flavor: "citrus",
@@ -200,7 +212,7 @@ async function main(){
             gbi: "",
             img: "../public/imgs/red.png"
         }
-        await flavors.create(red);
+        await flavorsCollection.insertOne(red);
         let throwback = {
             name: "Throwback",
             flavor: "citrus",
@@ -211,7 +223,7 @@ async function main(){
             gbi: "",
             img: "../public/imgs/throwback.png"
         }
-        await flavors.create(throwback);
+        await flavorsCollection.insertOne(throwback);
         let voltage = {
             name: "Voltage",
             flavor: "citrus",
@@ -222,7 +234,7 @@ async function main(){
             gbi: "",
             img: "../public/imgs/voltage.png"
         }
-        await flavors.create(voltage);
+        await flavorsCollection.insertOne(voltage);
         let vd = {
             name: "VooDew",
             flavor: "citrus",
@@ -233,7 +245,7 @@ async function main(){
             gbi: "",
             img: "../public/imgs/voodew.jpg"
         }
-        await flavors.create(vd);
+        await flavorsCollection.insertOne(vd);
         let wo = {
             name: "Whiteout",
             flavor: "citrus",
@@ -244,7 +256,7 @@ async function main(){
             gbi: "",
             img: "../public/imgs/whiteout.jpeg"
         }
-        await flavors.create(wo);
+        await flavorsCollection.insertOne(wo);
         let zero_sugar = {
             name: "Mountain Dew: Zero Sugar",
             flavor: "citrus",
@@ -255,11 +267,14 @@ async function main(){
             gbi: "",
             img: "../public/imgs/zero_sugar.png"
         }
-        await flavors.create(zero_sugar);
+        await flavorsCollection.insertOne(zero_sugar);
     }
     catch(e){
         console.log(e);
     }
+    const db = await connection();
+	await db.serverConfig.close();
+	console.log("main finished");
 }
 
-main();
+module.exports = {main};
