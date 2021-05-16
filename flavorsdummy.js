@@ -8,12 +8,12 @@ MongoClient.connect(url, function(err, db) {
   db.close();
 });
 
-const mongoCollections = require('../config/mongoCollections');
-const connection = require('../config/mongoConnection');
+const mongoCollections = require('./config/mongoCollections');
+const connection = require('./config/mongoConnection');
 const flavors = mongoCollections.flavors;
 
 async function main(){
-    const flavorsCollection = await flavors();
+    const flavorsCollection = await flavors;
     try{
         let original = {
             name: "Original",
