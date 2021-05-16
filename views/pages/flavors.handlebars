@@ -41,64 +41,22 @@
 </nav>
 
 <div class="container">
-  {{!-------Copy the rows and column portion as many times as needed for the flavors------}}
-  <div class="row" id = "REPLACEWITHFLAVORNAME">
+  {{#each flavor}}
+  <div class="row" id = "{{name}}">
     <div class="col-sm-4">
-      <img src="../public/imgs/REPLACEWITHFLAVORIMG.png" alt="REPLACEWITHFLAVORNAME">
+      <img src="../public/imgs/{{img}}.png" alt="{{name}}">
     </div>
     <div class="col-sm-4 description">
-      <p>Name: </p>
-      <p>Flavor: </p>
-      <p>Rating: </p>
-      <p>Potency: </p>
-      <p>Weight: </p>
-      <p>Carbonation: </p>
-      <p>General Body Info: </p>
+      <p>Name: {{name}}</p>
+      <p>Flavor: {{flavor}}</p>
+      <p>Rating: {{rating}}</p>
+      <p>Potency: {{potency}}</p>
+      <p>Weight: {{weight}}</p>
+      <p>Carbonation: {{carb}}</p>
+      <p>General Body Info: {{gbi}}</p>
     </div>
   </div>
-  <div class="row" id = "REPLACEWITHFLAVORNAME">
-    <div class="col-sm-4">
-      <img src="../public/imgs/REPLACEWITHFLAVORIMG.png" alt="REPLACEWITHFLAVORNAME">
-    </div>
-    <div class="col-sm-4 description">
-      <p>Name: </p>
-      <p>Flavor: </p>
-      <p>Rating: </p>
-      <p>Potency: </p>
-      <p>Weight: </p>
-      <p>Carbonation: </p>
-      <p>General Body Info: </p>
-    </div>
-  </div>
-  <div class="row" id = "REPLACEWITHFLAVORNAME">
-    <div class="col-sm-4">
-      <img src="../public/imgs/REPLACEWITHFLAVORIMG.png" alt="REPLACEWITHFLAVORNAME">
-    </div>
-    <div class="col-sm-4 description">
-      <p>Name: </p>
-      <p>Flavor: </p>
-      <p>Rating: </p>
-      <p>Potency: </p>
-      <p>Weight: </p>
-      <p>Carbonation: </p>
-      <p>General Body Info: </p>
-    </div>
-  </div>
-  <div class="row" id = "REPLACEWITHFLAVORNAME">
-    <div class="col-sm-4">
-      <img src="../public/imgs/REPLACEWITHFLAVORIMG.png" alt="REPLACEWITHFLAVORNAME">
-    </div>
-    <div class="col-sm-4 description">
-      <p>Name: </p>
-      <p>Flavor: </p>
-      <p>Rating: </p>
-      <p>Potency: </p>
-      <p>Weight: </p>
-      <p>Carbonation: </p>
-      <p>General Body Info: </p>
-    </div>
-  </div>
-
+  {{/each}}
 <nav class="navbar navbar-expand-xl bg-dark navbar-dark">
   <ul class="navbar-nav">
     <li class="nav-item">

@@ -46,15 +46,14 @@
       <p>Username: </p><p id="usr">{{username}}</p>
       <label for="ff">Select your favorite flavor: </label>
         <select name="ff" id="ff">
-          <option value="Original">Original</option>
 		  {{#each flavor}}
-		  <option value="{{flavor.name}}">{{flavor.name}}</option>
+		  <option value="{{name}}">{{name}}</option>
 		  {{/each}}
         </select>
       <div>
         <p>Posts: </p>
 		  {{#each post}}
-		  <p>{{post.content}}</p>
+		  <p>{{content}}</p>
 		  {{/each}}
       </div>
     </div>
