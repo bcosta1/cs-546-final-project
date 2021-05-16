@@ -24,28 +24,28 @@ const exportedMethods = {
     if (typeof title !== 'string') throw 'No title provided';
     if (typeof body !== 'string') throw 'I aint got nobody!';
 
-    if (!Array.isArray(tags)) {
-      tags = [];
-    }
+    //if (!Array.isArray(tags)) {
+    //  tags = [];
+    //}
 
     const postCollection = await posts();
 
-    const userThatPosted = await users.getUserById(posterId);
+    //const userThatPosted = await users.getUserById(posterId);
 
     const newPost = {
       title: title,
       body: body,
-      poster: {
-        id: posterId,
-        name: `${userThatPosted.firstName} ${userThatPosted.lastName}`
-      },
-      tags: tags,
+      //poster: {
+      //  id: posterId,
+      //  name: `${userThatPosted.firstName} ${userThatPosted.lastName}`
+      //},
+      //tags: tags,
     };
 
     const newInsertInformation = await postCollection.insertOne(newPost);
     const newId = newInsertInformation.insertedId;
 
-    await users.addPostToUser(posterId, newId, title);
+    //await users.addPostToUser(posterId, newId, title);
 
     return await this.getPostById(newId);
   },

@@ -36,14 +36,16 @@ router.post('/', async (req, res) => {
     res.status(400).json({ error: 'You must provide blog post body' });
     return;
   }
+  /*
   if (!blogPostData.posterId) {
     res.status(400).json({ error: 'You must provide poster ID' });
     return;
   }
+  */
   try {
-    const { title, body, tags, posterId } = blogPostData;
-    const newPost = await postData.addPost(title, body, tags, posterId);
-    res.json(newPost);
+    const { title, body } = blogPostData;
+    const newPost = await postData.addPost(title, body);
+    res.redirect('/posts');
   } catch (e) {
     res.status(500).json({ error: e });
   }
