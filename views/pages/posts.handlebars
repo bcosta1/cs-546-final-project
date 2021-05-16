@@ -49,15 +49,20 @@
 		<button class="btn_post">Post</button>
       </form>
 	  {{#each post}}
-      <p>{{title}}</p>
+      <p>Title: {{title}}</p>
       <div class= "posts">
         <p>{{body}}</p>
       </div>
+	  {{#each replies}}
+		<p>Reply: {{this}}</p>
+	  {{/each}}
       <div>
-        <input type="text" placeholder="type your reply here">
-        <button class="btn_reply">
-          Reply
-        </button>
+	    <form action="/posts/reply/{{_id}}" method="post">
+			<input type="text" id="body" name="body" placeholder="type your reply here">
+			<button class="btn_reply">
+			  Reply
+			</button>
+		</form>
       </div>
 	  {{/each}}
     </div>

@@ -1,6 +1,7 @@
 const mongoCollections = require('../config/mongoCollections');
 const posts = mongoCollections.posts;
 const users = require('./users');
+const ObjectID = require('mongodb').ObjectID;
 
 const exportedMethods = {
   async getAllPosts() {
@@ -14,8 +15,10 @@ const exportedMethods = {
     return await postCollection.find({ tags: tag }).toArray();
   },
   async getPostById(id) {
+
     const postCollection = await posts();
     const post = await postCollection.findOne({ _id: id });
+
 
     if (!post) throw 'Post not found';
     return post;
@@ -35,6 +38,7 @@ const exportedMethods = {
     const newPost = {
       title: title,
       body: body,
+	  replies: [],
       //poster: {
       //  id: posterId,
       //  name: `${userThatPosted.firstName} ${userThatPosted.lastName}`
@@ -48,6 +52,31 @@ const exportedMethods = {
     //await users.addPostToUser(posterId, newId, title);
 
     return await this.getPostById(newId);
+  },
+  async addPostReply(body, id) {
+	  console.log(body);
+	  console.log(id);
+    if ((typeof body) !== 'string') throw 'I aint got nobody!';
+    const postCollection = await posts();
+	console.log("now trying to get post by id");
+	
+	const post = await this.getPostById(ObjectID(id));
+	console.log(`post = ${post}`);
+	let new_replies = post.replies;
+	console.log(new_replies);
+	new_replies.push(body);
+	console.log(new_replies);
+    const newPost = {
+		replies: new_replies,
+	};
+	console.log('before');
+	await postCollection.updateOne({ _id: ObjectID(id) }, { $set: newPost });
+	console.log(newPost);
+	return true;
+  },
+  async reply(){
+	  const postCollection = await posts();
+	  document.getElementById
   },
   async removePost(id) {
     const postCollection = await posts();

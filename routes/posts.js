@@ -51,6 +51,33 @@ router.post('/', async (req, res) => {
   }
 });
 
+router.post('/reply/:id', async (req, res) => {
+  const blogPostData = req.body;
+  /*
+  if (!blogPostData.title) {
+    res.status(400).json({ error: 'You must provide blog post title' });
+    return;
+  }
+  */
+  if (!blogPostData.body) {
+    res.status(400).json({ error: 'You must provide blog post body' });
+    return;
+  }
+  /*
+  if (!blogPostData.posterId) {
+    res.status(400).json({ error: 'You must provide poster ID' });
+    return;
+  }
+  */
+  try {
+    const { body } = blogPostData;
+    const newPost = await postData.addPostReply(body, req.params.id);
+    res.redirect('/posts');
+  } catch (e) {
+    res.status(500).json({ error: e });
+  }
+});
+
 router.put('/:id', async (req, res) => {
   const updatedData = req.body;
   if (!updatedData.title || !updatedData.body || !updatedData.posterId) {
